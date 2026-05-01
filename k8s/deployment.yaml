@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopez-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shopez
+  template:
+    metadata:
+      labels:
+        app: shopez
+    spec:
+      containers:
+      - name: shopez
+        image: goksman23/shopez-app:latest
+        ports:
+        - containerPort: 3000
