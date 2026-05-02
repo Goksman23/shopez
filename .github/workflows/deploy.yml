@@ -32,7 +32,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Update kubeconfig
-        run: aws eks update-kubeconfig --name shopez-cluster --region us-east-1
+        run: aws eks update-kubeconfig --name shopez-eks --region us-east-1
 
       - name: Deploy to Kubernetes
         run: |
